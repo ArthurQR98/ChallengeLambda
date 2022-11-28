@@ -137,6 +137,15 @@ POST http://localhost:3000/dev/planets
 
 ## 🚀 Deployment with CI CD <a name = "deployment"></a>
 
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=600px height=200px src="resources/1.jpg" alt="Challenge Rimac"></a>
+</p>
+
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=600px height=200px src="resources/3.jpg" alt="Challenge Rimac"></a>
+</p>
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
@@ -144,6 +153,8 @@ POST http://localhost:3000/dev/planets
 - [Serverless Framework](https://www.serverless.com/) - Framework
 - [Lambda](https://aws.amazon.com/es/lambda/) - Lambda AWS
 - [API Gateway](https://aws.amazon.com/es/api-gateway/) - API Gateway
+- [CodeBuild AWS](https://aws.amazon.com/es/codebuild/) - Code Build
+- [CodePipeline AWS](https://aws.amazon.com/es/codepipeline/) - Code Pipeline
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors <a name = "authors"></a>

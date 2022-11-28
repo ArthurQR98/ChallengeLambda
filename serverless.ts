@@ -8,6 +8,7 @@ const serverlessConfiguration: AWS = {
     "serverless-esbuild",
     "serverless-jest-plugin",
     "serverless-dynamodb-local",
+    "serverless-domain-manager",
   ],
   provider: {
     name: "aws",
@@ -139,6 +140,13 @@ const serverlessConfiguration: AWS = {
       define: { "require.resolve": undefined },
       platform: "node",
       concurrency: 5,
+    },
+    customDomain: {
+      domainName: "challenge_rimac.arthur-queza.com",
+      basePath: "v1",
+      state: "${self:provider.stage}",
+      certificateName: "arthur-quezada.com",
+      createRoute53Record: true,
     },
   },
   resources: {
