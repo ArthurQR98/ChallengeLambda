@@ -12,33 +12,37 @@ const createPeople: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (
   event
 ) => {
   try {
-    const item = {
-      id: moment().unix(),
-      nombre: event.body.nombre,
-      altura: event.body.altura,
-      masa: event.body.masa,
-      pelo_color: event.body.pelo_color,
-      piel_color: event.body.piel_color,
-      ojos_color: event.body.ojos_color,
-      cumpleaños: event.body.cumpleaños,
-      genero: event.body.genero,
-      mundo_natal: event.body.mundo_natal,
-      films: event.body.films,
-      especies: event.body.especies,
-      vehiculo: event.body.vehiculo,
-      naves_esteleres: event.body.naves_esteleres,
-      creado: moment().format(),
-      url: event.body.url,
-    };
-
-    await dynamoDb
-      .put({ TableName: process.env.TABLE_PEOPLE, Item: item })
-      .promise();
-
+    const item = await save(event.body);
     return formatJSONResponse(item, 201);
   } catch (error) {
     return formatJSONResponse({ error: "no se pudo crear el item" }, 500);
   }
 };
+
+async function save(body) {
+  const item = {
+    id: moment().unix(),
+    nombre: body.nombre,
+    altura: body.altura,
+    masa: body.masa,
+    pelo_color: body.pelo_color,
+    piel_color: body.piel_color,
+    ojos_color: body.ojos_color,
+    cumpleaños: body.cumpleaños,
+    genero: body.genero,
+    mundo_natal: body.mundo_natal,
+    films: body.films,
+    especies: body.especies,
+    vehiculo: body.vehiculo,
+    naves_esteleres: body.naves_esteleres,
+    creado: moment().format(),
+    url: body.url,
+  };
+
+  await dynamoDb
+    .put({ TableName: process.env.TABLE_PEOPLE, Item: item })
+    .promise();
+  return item;
+}
 
 export const main = middyfy(createPeople);

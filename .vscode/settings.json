@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/phraseapp.json": "file:///c%3A/Users/a_r_q/Documents/Study/Backend/Node/lambda-aws/serverlessFramework/rimac_challenge/swagger.yml"
+    }
+}

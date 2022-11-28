@@ -4,7 +4,7 @@ import { DynamoDB } from "aws-sdk";
 
 const dynamoDb = new DynamoDB.DocumentClient();
 
-const getOne = async (event, _context) => {
+const getOne = async (event) => {
   try {
     const id = Number(event.pathParameters.id);
 

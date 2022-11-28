@@ -8,7 +8,7 @@ const params = {
   TableName: process.env.TABLE_PLANETS,
 };
 
-const getAll = async (_event, _context) => {
+const getAll = async (_event) => {
   try {
     const result = await dynamoDb.scan(params).promise();
 

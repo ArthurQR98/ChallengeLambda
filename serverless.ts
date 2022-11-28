@@ -13,7 +13,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: "aws",
     runtime: "nodejs16.x",
-    stage: "prod",
+    stage: "dev",
     memorySize: 128,
     region: "us-east-1",
     timeout: 20,

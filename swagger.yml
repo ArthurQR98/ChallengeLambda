@@ -1,0 +1,129 @@
+openapi: 3.0.1
+info:
+  title: Rimac Challenge
+  version: "2022-11-28T01:17:02Z"
+servers:
+  - url: https://challenge.arthur-quezada.com/v1
+tags:
+  - name: people
+    description: Everything about People
+  - name: planets
+    description: Everything about Planets
+paths:
+  /people/{id}:
+    get:
+      tags:
+        - people
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pet"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Pet not found
+  /people:
+    get:
+      tags:
+        - people
+      responses:
+        "200": null
+        description: 200 response
+        headers:
+          Access-Control-Allow-Origin:
+            schema:
+              type: string
+          Access-Control-Allow-Methods:
+            schema:
+              type: string
+          Access-Control-Allow-Headers:
+            schema:
+              type: string
+        content: {}
+    post:
+      get: null
+      tags:
+        - people
+      responses:
+        "200": null
+        description: 200 response
+        headers:
+          Access-Control-Allow-Origin:
+            schema:
+              type: string
+          Access-Control-Allow-Methods:
+            schema:
+              type: string
+          Access-Control-Allow-Headers:
+            schema:
+              type: string
+        content: {}
+  /planets:
+    get:
+      tags:
+        - planets
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+    responses:
+      "200":
+        description: 200 response
+        headers:
+          Access-Control-Allow-Origin:
+            schema:
+              type: string
+          Access-Control-Allow-Methods:
+            schema:
+              type: string
+          Access-Control-Allow-Headers:
+            schema:
+              type: string
+        content: {}
+  /planets/{id}:
+    get:
+      tags:
+        - planets
+      responses:
+        "200": null
+        description: 200 response
+        headers:
+          Access-Control-Allow-Origin:
+            schema:
+              type: string
+          Access-Control-Allow-Methods:
+            schema:
+              type: string
+          Access-Control-Allow-Headers:
+            schema:
+              type: string
+        content: {}
+    post:
+      get: null
+      tags:
+        - planets
+      responses:
+        "200": null
+        description: 200 response
+        headers:
+          Access-Control-Allow-Origin:
+            schema:
+              type: string
+          Access-Control-Allow-Methods:
+            schema:
+              type: string
+          Access-Control-Allow-Headers:
+            schema:
+              type: string
+        content: {}

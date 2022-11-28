@@ -5,7 +5,8 @@
   "main": "serverless.ts",
   "scripts": {
     "dev": "serverless offline",
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "test": "jest"
   },
   "engines": {
     "node": ">=14.15.0"

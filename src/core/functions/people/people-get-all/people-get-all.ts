@@ -7,7 +7,7 @@ const dynamoDb = new DynamoDB.DocumentClient();
 const getPeople = async (event) => {
   try {
     let query = event.queryStringParameters;
-    let limit = query && query.limit ? Number(query.limit) : 5;
+    let limit = query && query.limit ? Number(query.limit) : 10;
     let params = {
       TableName: process.env.TABLE_PEOPLE,
       Limit: limit,
