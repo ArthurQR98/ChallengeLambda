@@ -13,7 +13,7 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: "aws",
     runtime: "nodejs16.x",
-    stage: "dev",
+    stage: "prod",
     memorySize: 128,
     region: "us-east-1",
     timeout: 20,
@@ -142,7 +142,7 @@ const serverlessConfiguration: AWS = {
       concurrency: 5,
     },
     customDomain: {
-      domainName: "challenge_rimac.arthur-queza.com",
+      domainName: "challenge.arthur-quezada.com",
       basePath: "v1",
       state: "${self:provider.stage}",
       certificateName: "arthur-quezada.com",

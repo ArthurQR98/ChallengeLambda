@@ -148,6 +148,12 @@ POST http://localhost:3000/dev/planets
 </p>
 
 
+## 🌅 Production
+
+```
+https://challenge.arthur-quezada.com/v1
+```
+
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [Serverless Framework](https://www.serverless.com/) - Framework
@@ -155,6 +161,7 @@ POST http://localhost:3000/dev/planets
 - [API Gateway](https://aws.amazon.com/es/api-gateway/) - API Gateway
 - [CodeBuild AWS](https://aws.amazon.com/es/codebuild/) - Code Build
 - [CodePipeline AWS](https://aws.amazon.com/es/codepipeline/) - Code Pipeline
+- [Route53 AWS](https://aws.amazon.com/es/route53/) - Route53
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors <a name = "authors"></a>
